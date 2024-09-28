@@ -1,6 +1,17 @@
+import java.util.Scanner;
+
 public class Calculator{
 
 	public static void main(String [] args){
+
+		Scanner sc= new Scanner(System.in);
+		System.out.print("Enter first number- ");
+		int a= sc.nextInt();
+		System.out.print("Enter second number- ");
+		int b= sc.nextInt();s
+		System.out.println("Enter operator - ");
+		char operator = sc.next().charAt(0);
+
 		System.out.println("Calculator Program");
 		/* int a = 12;
 		int b = 13;
@@ -13,7 +24,7 @@ public class Calculator{
 		System.out.println("multiplication = "+multiplication);
 		System.out.println("div = "+div); */
 		
-		/*int a = 12;
+		/* int a = 12;
 		int b = 13;
 		add(a,b);
 		diff(a,b);
@@ -27,10 +38,11 @@ public class Calculator{
 		CalCulationLogic.multiplication(a,b);
 		CalCulationLogic.division(a,b);*/
 
-		CalCulationLogic.calculation('+');
+		CalCulationLogic.calculation(operator,a,b);
 	}
 
 	private static void add(int a, int b){
+
 		int sum = a+b;
 		System.out.println("sum = "+sum);
 	}

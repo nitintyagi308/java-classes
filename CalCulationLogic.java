@@ -1,6 +1,8 @@
+import java.util.Scanner;
+
 public class CalCulationLogic{
 
-	public void add(int a, int b){
+	public static void add(int a, int b){
 		int sum = a+b;
 		System.out.println("sum = "+sum);
 	}
@@ -20,19 +22,20 @@ public class CalCulationLogic{
 		System.out.println("division = "+division);
 	}
 
-	public static void calculation(char operator){
+	public static void calculation(char operator,int a , int b){
+
 		switch(operator) {
 			case '+':
-			System.out.println("sum = ");
+				add(a,b);
 			break;
 			case '-':
-			System.out.println("diff = ");
+				diff(a,b);
 			break;
 			case '*':
-			System.out.println("Mul = ");
+			    multiplication(a,b);
 			break;
 			case '/':
-			System.out.println("Division = ");
+			    division(a,b);
 			break;
 			default:
 			System.out.println("Wrong operator = "+operator);
